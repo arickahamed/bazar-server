@@ -23,7 +23,7 @@ app.use(express.json());
 app.use(morgan("dev"));
 
 // routes
-app.use("/app/v1/auth", authRoutes);
+app.use(`${process.env.PORT}/app/v1/auth`, authRoutes);
 app.use("/app/v1/category", categoryRoutes);
 app.use("/app/v1/product", productRoutes);
 app.use("/app/v1/payment", paymentRoutes)
