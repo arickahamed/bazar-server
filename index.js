@@ -31,7 +31,7 @@ app.use("/app/v1/payment", paymentRoutes)
 // rest api 
 app.get("/", (req, res) => {
     res.send({
-        message: "Welcome to ecommerce website"
+        message: "Welcome to e-commerce website"
     })
 })
 
