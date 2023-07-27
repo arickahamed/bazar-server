@@ -2,7 +2,6 @@ import cors from 'cors';
 import dotenv from "dotenv";
 import express from "express";
 import morgan from "morgan";
-import path from "path";
 import connectDB from "./config/db.js";
 import authRoutes from "./routes/authRoute.js";
 import categoryRoutes from "./routes/categoryRoutes.js";
@@ -22,7 +21,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(morgan("dev"));
-app.use(express.static(path.join(__dirname, "../client/build")));
 
 // routes
 app.use("/app/v1/auth", authRoutes);

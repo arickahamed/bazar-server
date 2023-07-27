@@ -10,7 +10,6 @@ export const paymentController = async (req, res) => {
     try {
         const price = req.body.amount;
         const amount = price * 100;
-        console.log("new amount-"amount);
 
         const paymentIntent = await stripe.paymentIntents.create({
             currency: "usd",
